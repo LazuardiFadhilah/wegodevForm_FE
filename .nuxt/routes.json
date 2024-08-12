@@ -1,0 +1,16 @@
+[
+  {
+    "name": "inspire",
+    "path": "/inspire",
+    "component": "/Users/lazuardifadhilah/Code/wgdForm/frontend/pages/inspire.vue",
+    "chunkName": "pages/inspire",
+    "_name": "_2cc44803"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/lazuardifadhilah/Code/wgdForm/frontend/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_6fcbf23b"
+  }
+]
