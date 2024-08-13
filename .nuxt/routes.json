@@ -6,6 +6,12 @@
     "chunkName": "pages/inspire"
   },
   {
+    "name": "register",
+    "path": "/register",
+    "component": "/Users/lazuardifadhilah/Code/wgdForm/frontend/pages/register.vue",
+    "chunkName": "pages/register"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "/Users/lazuardifadhilah/Code/wgdForm/frontend/pages/index.vue",
