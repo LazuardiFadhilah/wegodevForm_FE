@@ -37,7 +37,9 @@
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="primary" type="submit"> Register </v-btn>
+          <v-btn color="primary" type="submit" @click="onSubmit">
+            Register
+          </v-btn>
         </v-card-actions>
       </v-card>
       <div class="d-flex align-baseline">
@@ -87,6 +89,16 @@ export default {
         ],
       },
     };
+  },
+  methods: {
+    async onSubmit() {
+      try {
+        await this.$axios.$post("http://localhost:3000/register", this.form);
+        console.log(this.form);
+      } catch (error) {
+        console.log(error);
+      }
+    },
   },
 };
 </script>
