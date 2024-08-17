@@ -4,7 +4,7 @@
       <v-card>
         <v-toolbar dark color="primary"> Register </v-toolbar>
         <v-card-text>
-          <v-form>
+          <v-form ref="form">
             <v-text-field
               label="Name"
               :rules="rules.fullname"
@@ -64,6 +64,7 @@ export default {
   layout: "auth",
   data() {
     return {
+      emailExist: false,
       form: {
         fullname: "",
         email: "",
@@ -76,6 +77,7 @@ export default {
           (v) => !!v || "E-mail is required",
           (v) =>
             /[a-z0-9]+@[a-z}+.[a-z]{2,3}/.test(v) || "E-mail must be valid",
+          (v) => !this.emailExist || "E-mail exist",
         ],
         password: [
           (v) => !!v || "Password is required",
@@ -93,10 +95,15 @@ export default {
   methods: {
     async onSubmit() {
       try {
-        await this.$axios.$post("http://localhost:3000/register", this.form);
-        console.log(this.form);
+        if (this.$refs.form.validate()) {
+          await this.$axios.$post("http://localhost:3000/register", this.form);
+        }
       } catch (error) {
-        console.log(error);
+        console.log(error.response);
+        if (error.response.data.message == "EMAIL_ALREADY_EXISTS") {
+          this.emailExist = true;
+          this.$refs.form.validate();
+        }
       }
     },
   },
