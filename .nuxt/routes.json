@@ -3,18 +3,21 @@
     "name": "inspire",
     "path": "/inspire",
     "component": "/Users/lazuardifadhilah/Code/wgdForm/frontend/pages/inspire.vue",
-    "chunkName": "pages/inspire"
+    "chunkName": "pages/inspire",
+    "_name": "_2cc44803"
   },
   {
     "name": "register",
     "path": "/register",
     "component": "/Users/lazuardifadhilah/Code/wgdForm/frontend/pages/register.vue",
-    "chunkName": "pages/register"
+    "chunkName": "pages/register",
+    "_name": "_6fdeaa4a"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/lazuardifadhilah/Code/wgdForm/frontend/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_6fcbf23b"
   }
 ]

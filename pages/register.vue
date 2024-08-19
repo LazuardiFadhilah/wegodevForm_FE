@@ -16,6 +16,7 @@
               label="Email"
               :rules="rules.email"
               v-model="form.email"
+              @keydown="resetEmailExistMessage"
               type="email"
               required
             ></v-text-field>
@@ -37,7 +38,12 @@
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="primary" type="submit" @click="onSubmit">
+          <v-btn
+            color="primary"
+            type="submit"
+            @click="onSubmit"
+            :loading="isLoading"
+          >
             Register
           </v-btn>
         </v-card-actions>
@@ -64,6 +70,7 @@ export default {
   layout: "auth",
   data() {
     return {
+      isLoading: false,
       emailExist: false,
       form: {
         fullname: "",
@@ -93,10 +100,23 @@ export default {
     };
   },
   methods: {
+    resetEmailExistMessage() {
+      this.emailExist = false;
+    },
     async onSubmit() {
       try {
         if (this.$refs.form.validate()) {
-          await this.$axios.$post("http://localhost:3000/register", this.form);
+          this.isLoading = true;
+          const response = await this.$axios.$post(
+            "http://localhost:3000/register",
+            this.form
+          );
+          if (response.message == "USER_REGISTER_SUCCESS") {
+            // save access token to cookies
+            // save refresh token to cookies
+            // this.$router.push("/dasboard");
+            alert();
+          }
         }
       } catch (error) {
         console.log(error.response);
@@ -105,6 +125,7 @@ export default {
           this.$refs.form.validate();
         }
       }
+      this.isLoading = false;
     },
   },
 };
