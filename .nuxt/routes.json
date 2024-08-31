@@ -7,6 +7,13 @@
     "_name": "_2cc44803"
   },
   {
+    "name": "login",
+    "path": "/login",
+    "component": "/Users/lazuardifadhilah/Code/wgdForm/frontend/pages/login.vue",
+    "chunkName": "pages/login",
+    "_name": "_39739552"
+  },
+  {
     "name": "register",
     "path": "/register",
     "component": "/Users/lazuardifadhilah/Code/wgdForm/frontend/pages/register.vue",

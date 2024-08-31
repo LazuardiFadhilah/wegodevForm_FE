@@ -1,0 +1,98 @@
+<template>
+  <v-row>
+    <v-col md="4" offset-md="4" cols="10" offset="1">
+      <v-card>
+        <v-toolbar dark color="primary"> Login </v-toolbar>
+        <v-card-text>
+          <v-alert color="red lighten-2" dark v-if="isError">
+            {{ message }}
+          </v-alert>
+          <v-form ref="form">
+            <v-text-field
+              label="Email"
+              :rules="rules.email"
+              v-model="form.email"
+              type="email"
+              required
+            ></v-text-field>
+            <v-text-field
+              label="Password"
+              type="password"
+              :rules="rules.password"
+              v-model="form.password"
+              required
+            ></v-text-field>
+          </v-form>
+        </v-card-text>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn
+            color="primary"
+            type="submit"
+            @click="onSubmit"
+            :loading="isLoading"
+          >
+            Login
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+      <div class="d-flex align-baseline">
+        <p>Kamu sudah punya akun ?</p>
+        <v-btn
+          text
+          plain
+          :ripple="false"
+          to="/register"
+          color="primary"
+          class="pl-1"
+        >
+          Register
+        </v-btn>
+      </div>
+    </v-col>
+  </v-row>
+</template>
+
+<script>
+export default {
+  layout: "auth",
+  data() {
+    return {
+      isLoading: false,
+      isError: false,
+      message: null,
+      form: {
+        email: "",
+        password: "",
+      },
+      rules: {
+        email: [
+          (v) => !!v || "E-mail is required",
+          (v) =>
+            /[a-z0-9]+@[a-z}+.[a-z]{2,3}/.test(v) || "E-mail must be valid",
+        ],
+        password: [
+          (v) => !!v || "Password is required",
+          (v) => v.length >= 6 || "Password must be more than 6 characters",
+        ],
+      },
+    };
+  },
+  methods: {
+    async onSubmit() {
+      try {
+        this.isLoading = true;
+        const user = await this.$store.dispatch("auth/login", this.form);
+        this.isLoading = false;
+      } catch (error) {
+        console.log(error.response);
+        this.isError = true;
+        this.isLoading = false;
+        this.message = error.response
+          ? error.response.data.message
+          : "SERVER_ERROR";
+      }
+    },
+  },
+};
+</script>
