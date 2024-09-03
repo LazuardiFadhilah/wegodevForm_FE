@@ -1,27 +1,55 @@
 [
   {
-    "name": "inspire",
+    "name": "index___en",
+    "path": "/en",
+    "component": "/Users/lazuardifadhilah/Code/wgdForm/frontend/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_6fcbf23b"
+  },
+  {
+    "name": "inspire___id",
     "path": "/inspire",
     "component": "/Users/lazuardifadhilah/Code/wgdForm/frontend/pages/inspire.vue",
     "chunkName": "pages/inspire",
     "_name": "_2cc44803"
   },
   {
-    "name": "login",
+    "name": "login___id",
     "path": "/login",
     "component": "/Users/lazuardifadhilah/Code/wgdForm/frontend/pages/login.vue",
     "chunkName": "pages/login",
     "_name": "_39739552"
   },
   {
-    "name": "register",
+    "name": "register___id",
     "path": "/register",
     "component": "/Users/lazuardifadhilah/Code/wgdForm/frontend/pages/register.vue",
     "chunkName": "pages/register",
     "_name": "_6fdeaa4a"
   },
   {
-    "name": "index",
+    "name": "inspire___en",
+    "path": "/en/inspire",
+    "component": "/Users/lazuardifadhilah/Code/wgdForm/frontend/pages/inspire.vue",
+    "chunkName": "pages/inspire",
+    "_name": "_2cc44803"
+  },
+  {
+    "name": "login___en",
+    "path": "/en/login",
+    "component": "/Users/lazuardifadhilah/Code/wgdForm/frontend/pages/login.vue",
+    "chunkName": "pages/login",
+    "_name": "_39739552"
+  },
+  {
+    "name": "register___en",
+    "path": "/en/register",
+    "component": "/Users/lazuardifadhilah/Code/wgdForm/frontend/pages/register.vue",
+    "chunkName": "pages/register",
+    "_name": "_6fdeaa4a"
+  },
+  {
+    "name": "index___id",
     "path": "/",
     "component": "/Users/lazuardifadhilah/Code/wgdForm/frontend/pages/index.vue",
     "chunkName": "pages/index",

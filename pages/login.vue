@@ -5,7 +5,7 @@
         <v-toolbar dark color="primary"> Login </v-toolbar>
         <v-card-text>
           <v-alert color="red lighten-2" dark v-if="isError">
-            {{ message }}
+            {{ $t(message) }}
           </v-alert>
           <v-form ref="form">
             <v-text-field

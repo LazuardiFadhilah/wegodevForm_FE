@@ -4,10 +4,10 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
+const _6fcbf23b = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 const _2cc44803 = () => interopDefault(import('../pages/inspire.vue' /* webpackChunkName: "pages/inspire" */))
 const _39739552 = () => interopDefault(import('../pages/login.vue' /* webpackChunkName: "pages/login" */))
 const _6fdeaa4a = () => interopDefault(import('../pages/register.vue' /* webpackChunkName: "pages/register" */))
-const _6fcbf23b = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -21,21 +21,37 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/en",
+    component: _6fcbf23b,
+    name: "index___en"
+  }, {
     path: "/inspire",
     component: _2cc44803,
-    name: "inspire"
+    name: "inspire___id"
   }, {
     path: "/login",
     component: _39739552,
-    name: "login"
+    name: "login___id"
   }, {
     path: "/register",
     component: _6fdeaa4a,
-    name: "register"
+    name: "register___id"
+  }, {
+    path: "/en/inspire",
+    component: _2cc44803,
+    name: "inspire___en"
+  }, {
+    path: "/en/login",
+    component: _39739552,
+    name: "login___en"
+  }, {
+    path: "/en/register",
+    component: _6fdeaa4a,
+    name: "register___en"
   }, {
     path: "/",
     component: _6fcbf23b,
-    name: "index"
+    name: "index___id"
   }],
 
   fallback: false
