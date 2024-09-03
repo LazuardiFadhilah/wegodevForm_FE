@@ -120,9 +120,16 @@ export default {
             this.form
           );
           if (response.message == "USER_REGISTER_SUCCESS") {
+            console.log(response);
             // save access token to cookies
+            this.$store.commit("auth/setAccessToken", response.accessToken);
             // save refresh token to cookies
+            this.$store.commit("auth/setRefreshToken", response.refreshToken);
+            // save fullname token to cookies
+            this.$store.commit("auth/setFullname", response.fullname);
             // this.$router.push("/dasboard");
+
+            alert();
           }
         }
       } catch (error) {
