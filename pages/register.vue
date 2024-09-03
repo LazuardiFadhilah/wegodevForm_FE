@@ -79,22 +79,30 @@ export default {
         password_confirmation: "",
       },
       rules: {
-        fullname: [(v) => !!v || "Fullname is required"],
+        fullname: [
+          (v) => !!v || this.$t("FIELD_REQUIRED", { field: "fullname" }),
+        ],
         email: [
-          (v) => !!v || "E-mail is required",
+          (v) => !!v || this.$t("FIELD_REQUIRED", { field: "email" }),
           (v) =>
-            /[a-z0-9]+@[a-z}+.[a-z]{2,3}/.test(v) || "E-mail must be valid",
-          (v) => !this.emailExist || "E-mail exist",
+            /[a-z0-9]+@[a-z}+.[a-z]{2,3}/.test(v) || this.$t("EMAIL_INVALID"),
+          (v) => !this.emailExist || this.$t("EMAIL_EXIST"),
         ],
         password: [
-          (v) => !!v || "Password is required",
-          (v) => v.length >= 6 || "Password must be more than 6 characters",
+          (v) => !!v || this.$t("FIELD_REQUIRED", { field: "password" }),
+          (v) =>
+            v.length >= 6 ||
+            this.$t("FIELD_MIN", { field: "password", min: 6 }),
         ],
         password_confirmation: [
-          (v) => !!v || "Password Confirmation is required",
+          (v) =>
+            !!v || this.$t("FIELD_REQUIRED", { field: "konfirmasi password" }),
           (v) =>
             v === this.form.password ||
-            "Password Confirmation must be the same as Password",
+            this.$t("FIELD_CONFIRM", {
+              fieldConfirm: "Konfirmasi password",
+              field: "password",
+            }),
         ],
       },
     };
@@ -115,7 +123,6 @@ export default {
             // save access token to cookies
             // save refresh token to cookies
             // this.$router.push("/dasboard");
-            alert();
           }
         }
       } catch (error) {
