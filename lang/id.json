@@ -2,6 +2,7 @@
     "SERVER_ERROR":"Server mengalami gangguan, silahkan coba beberapa saat lagi",
     "INVALID_PASSWORD":"Password tidak cocok",
     "USER_NOT_FOUND":"User / Email tidak ditemukan",
+    "EMAIL_IS_REQUIRED":"Email harus di isi",
 
     "FIELD_REQUIRED":"{field} ini harus di isi",
     "FIELD_MIN":"{field} minimal {min} karakter",

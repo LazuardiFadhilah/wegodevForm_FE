@@ -1,5 +1,12 @@
 {
     "SERVER_ERROR":"Server internal error",
     "INVALID_PASSWORD":"Password wrong",
-    "USER_NOT_FOUND":"User / Email not found"
+    "USER_NOT_FOUND":"User / Email not found",
+     "EMAIL_IS_REQUIRED":"Email required",
+
+    "FIELD_REQUIRED":"{field} ini harus di isi",
+    "FIELD_MIN":"{field} minimal {min} karakter",
+    "EMAIL_INVALID":"Format email tidak valid",
+    "FIELD_CONFIRM":"isi {fieldConfirm} tidak sama dengan {field}",
+    "EMAIL_EXIST":"Email sudah terdaftar"
 }
