@@ -4,6 +4,15 @@ export const state = () => ({
   fullname: null,
 });
 
+export const getters = {
+  isAuthenticated(state) {
+    if (state.accessToken) {
+      return true;
+    }
+    return false;
+  },
+};
+
 export const mutations = {
   setFullname(state, fullname) {
     state.fullname = fullname;
