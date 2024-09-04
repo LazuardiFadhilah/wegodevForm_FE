@@ -120,7 +120,6 @@ export default {
             this.form
           );
           if (response.message == "USER_REGISTER_SUCCESS") {
-            console.log(response);
             // save access token to cookies
             this.$store.commit("auth/setAccessToken", response.accessToken);
             // save refresh token to cookies
@@ -128,8 +127,7 @@ export default {
             // save fullname token to cookies
             this.$store.commit("auth/setFullname", response.fullname);
             // this.$router.push("/dasboard");
-
-            alert();
+            this.$router.push({ name: `index___` + this.$i18n.locale });
           }
         }
       } catch (error) {

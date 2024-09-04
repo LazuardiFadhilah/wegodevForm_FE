@@ -87,6 +87,7 @@ export default {
       try {
         this.isLoading = true;
         const user = await this.$store.dispatch("auth/login", this.form);
+        this.$router.push({ name: `index___` + this.$i18n.locale });
         this.isLoading = false;
       } catch (error) {
         console.log(error.response);
