@@ -71,14 +71,12 @@ export default {
           (v) => !!v || this.$t("FIELD_REQUIRED", { field: "email" }),
           (v) =>
             /[a-z0-9]+@[a-z}+.[a-z]{2,3}/.test(v) || this.$t("EMAIL_INVALID"),
-          ,
         ],
         password: [
           (v) => !!v || this.$t("FIELD_REQUIRED", { field: "password" }),
           (v) =>
             v.length >= 6 ||
             this.$t("FIELD_MIN", { field: "password", min: 6 }),
-          ,
         ],
       },
     };
