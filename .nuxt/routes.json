@@ -3,70 +3,60 @@
     "name": "index___en",
     "path": "/en",
     "component": "/Users/lazuardifadhilah/Code/wgdForm/frontend/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_6fcbf23b"
+    "chunkName": "pages/index"
   },
   {
     "name": "inspire___id",
     "path": "/inspire",
     "component": "/Users/lazuardifadhilah/Code/wgdForm/frontend/pages/inspire.vue",
-    "chunkName": "pages/inspire",
-    "_name": "_2cc44803"
+    "chunkName": "pages/inspire"
   },
   {
     "name": "login___id",
     "path": "/login",
     "component": "/Users/lazuardifadhilah/Code/wgdForm/frontend/pages/login.vue",
-    "chunkName": "pages/login",
-    "_name": "_39739552"
+    "chunkName": "pages/login"
   },
   {
     "name": "logout___id",
     "path": "/logout",
     "component": "/Users/lazuardifadhilah/Code/wgdForm/frontend/pages/logout.vue",
-    "chunkName": "pages/logout",
-    "_name": "_42101d71"
+    "chunkName": "pages/logout"
   },
   {
     "name": "register___id",
     "path": "/register",
     "component": "/Users/lazuardifadhilah/Code/wgdForm/frontend/pages/register.vue",
-    "chunkName": "pages/register",
-    "_name": "_6fdeaa4a"
+    "chunkName": "pages/register"
   },
   {
     "name": "inspire___en",
     "path": "/en/inspire",
     "component": "/Users/lazuardifadhilah/Code/wgdForm/frontend/pages/inspire.vue",
-    "chunkName": "pages/inspire",
-    "_name": "_2cc44803"
+    "chunkName": "pages/inspire"
   },
   {
     "name": "login___en",
     "path": "/en/login",
     "component": "/Users/lazuardifadhilah/Code/wgdForm/frontend/pages/login.vue",
-    "chunkName": "pages/login",
-    "_name": "_39739552"
+    "chunkName": "pages/login"
   },
   {
     "name": "logout___en",
     "path": "/en/logout",
     "component": "/Users/lazuardifadhilah/Code/wgdForm/frontend/pages/logout.vue",
-    "chunkName": "pages/logout",
-    "_name": "_42101d71"
+    "chunkName": "pages/logout"
   },
   {
     "name": "register___en",
     "path": "/en/register",
     "component": "/Users/lazuardifadhilah/Code/wgdForm/frontend/pages/register.vue",
-    "chunkName": "pages/register",
-    "_name": "_6fdeaa4a"
+    "chunkName": "pages/register"
   },
   {
     "name": "index___id",
     "path": "/",
     "component": "/Users/lazuardifadhilah/Code/wgdForm/frontend/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_6fcbf23b"
+    "chunkName": "pages/index"
   }
 ]
