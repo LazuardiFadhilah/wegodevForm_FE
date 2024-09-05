@@ -1,5 +1,10 @@
 <template>
-  <v-app dark> </v-app>
+  <v-app dark>
+    <v-main>
+      <TheHeader />
+      <nuxt />
+    </v-main>
+  </v-app>
 </template>
 
 <script>

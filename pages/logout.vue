@@ -14,7 +14,6 @@
 </template>
 <script>
 export default {
-  layout: "auth",
   middleware: ["authenticated"],
   mounted() {
     // set timer 3 second

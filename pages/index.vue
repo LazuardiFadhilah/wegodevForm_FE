@@ -82,7 +82,6 @@
 
 <script>
 export default {
-  layout: "auth",
   middleware: "authenticated",
   head() {
     return {
