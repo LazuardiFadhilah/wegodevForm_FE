@@ -26,7 +26,10 @@ export default {
   css: [`~/assets/scss/main.scss`],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{ src: "~/plugins/persistedState.js", mode: "client" }],
+  plugins: [
+    { src: "~/plugins/persistedState.js", mode: "client" },
+    { src: "~/plugins/axiosInterceptors.js", mode: "client" },
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -65,10 +68,9 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    prefix: "http://localhost:3000", //server backend
+    // // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
+    baseURL: "http://localhost:3000",
     Proxy: true,
-    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: "/",
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
