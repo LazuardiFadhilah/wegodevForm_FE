@@ -116,10 +116,7 @@ export default {
       try {
         if (this.$refs.form.validate()) {
           this.isLoading = true;
-          const response = await this.$axios.$post(
-            "http://localhost:3000/register",
-            this.form
-          );
+          const response = await this.$axios.$post("/register", this.form);
           if (response.message == "USER_REGISTER_SUCCESS") {
             // save access token to cookies
             this.$store.commit("auth/setAccessToken", response.accessToken);

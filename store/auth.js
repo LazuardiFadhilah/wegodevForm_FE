@@ -32,10 +32,7 @@ export const mutations = {
 
 export const actions = {
   async login({ commit }, payload) {
-    const response = await this.$axios.post(
-      "http://localhost:3000/login",
-      payload
-    );
+    const response = await this.$axios.post("/login", payload);
     if (!response) {
       return false;
     }
