@@ -1,3 +1,4 @@
+export { default as AlertRight } from '../../components/AlertRight.vue'
 export { default as NuxtLogo } from '../../components/NuxtLogo.vue'
 export { default as TheHeader } from '../../components/TheHeader.vue'
 export { default as Tutorial } from '../../components/Tutorial.vue'
