@@ -22,28 +22,20 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   name: "AlertRight",
   data() {
-    return {
-      alerts: [
-        {
-          message: "Something went wrong",
-          type: "error",
-          show: true,
-        },
-        {
-          message: "something wrong happened",
-          type: "success",
-          show: true,
-        },
-      ],
-    };
+    return {};
   },
   methods: {
     onClose(index) {
-      this.alerts[index].show = false;
+      this.$store.commit("alerts/close", index);
     },
+  },
+  computed: {
+    ...mapState("alerts", ["alerts"]),
   },
 };
 </script>
