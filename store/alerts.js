@@ -1,15 +1,15 @@
 export const state = () => ({
   alerts: [
-    {
-      message: "Something went wrong",
-      type: "error",
-      show: true,
-    },
-    {
-      message: "something wrong happened",
-      type: "success",
-      show: true,
-    },
+    // {
+    //   message: "Something went wrong",
+    //   type: "error",
+    //   show: true,
+    // },
+    // {
+    //   message: "something wrong happened",
+    //   type: "success",
+    //   show: true,
+    // },
   ],
 });
 

@@ -7,6 +7,7 @@ You can directly use them in pages and other components without the need to impo
 **Tip:** If a component is conditionally rendered with `v-if` and is big, it is better to use `Lazy` or `lazy-` prefix to lazy load.
 
 - `<AlertRight>` | `<alert-right>` (components/AlertRight.vue)
+- `<BtnCreateForm>` | `<btn-create-form>` (components/BtnCreateForm.vue)
 - `<NuxtLogo>` | `<nuxt-logo>` (components/NuxtLogo.vue)
 - `<TheHeader>` | `<the-header>` (components/TheHeader.vue)
 - `<Tutorial>` | `<tutorial>` (components/Tutorial.vue)
