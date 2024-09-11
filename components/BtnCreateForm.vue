@@ -17,7 +17,12 @@ export default {
       try {
         this.isLoading = true;
         const forms = await this.$store.dispatch("forms/store");
+        const questions = await this.$store.dispatch(
+          "questions/store",
+          forms.form._id
+        );
         console.log(forms);
+        console.log(questions);
         // const question = await this.$axios.$post(
         //   `/forms/${forms.form._id}/questions`
         // );
