@@ -19,6 +19,7 @@ let store = {};
 
   resolveStoreModules(require('../store/alerts.js'), 'alerts.js')
   resolveStoreModules(require('../store/auth.js'), 'auth.js')
+  resolveStoreModules(require('../store/forms.js'), 'forms.js')
 
   // If the environment supports hot reloading...
 
@@ -27,6 +28,7 @@ let store = {};
     module.hot.accept([
       '../store/alerts.js',
       '../store/auth.js',
+      '../store/forms.js',
     ], () => {
       // Update `root.modules` with the latest definitions.
       updateModules()
