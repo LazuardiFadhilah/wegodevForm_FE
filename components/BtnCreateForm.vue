@@ -21,16 +21,9 @@ export default {
           "questions/store",
           forms.form._id
         );
-        console.log(forms);
-        console.log(questions);
-        // const question = await this.$axios.$post(
-        //   `/forms/${forms.form._id}/questions`
-        // );
-        // console.log(forms);
-        // console.log(question);
-        // this.$router.push(`/questions/${forms.form._id}`);
+        this.$router.push(`/questions/${forms.form._id}`);
       } catch (error) {
-        console.log(error);
+        console.log(error.response);
         this.isLoading = false;
       }
     },
