@@ -68,5 +68,19 @@
     "component": "/Users/lazuardifadhilah/Code/wgdForm/frontend/pages/index.vue",
     "chunkName": "pages/index",
     "_name": "_6fcbf23b"
+  },
+  {
+    "name": "questions-id___en",
+    "path": "/en/questions/:id?",
+    "component": "/Users/lazuardifadhilah/Code/wgdForm/frontend/pages/questions/_id.vue",
+    "chunkName": "pages/questions/_id",
+    "_name": "_ec97f13e"
+  },
+  {
+    "name": "questions-id___id",
+    "path": "/questions/:id?",
+    "component": "/Users/lazuardifadhilah/Code/wgdForm/frontend/pages/questions/_id.vue",
+    "chunkName": "pages/questions/_id",
+    "_name": "_ec97f13e"
   }
 ]

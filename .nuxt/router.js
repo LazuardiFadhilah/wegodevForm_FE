@@ -9,6 +9,7 @@ const _2cc44803 = () => interopDefault(import('../pages/inspire.vue' /* webpackC
 const _39739552 = () => interopDefault(import('../pages/login.vue' /* webpackChunkName: "pages/login" */))
 const _42101d71 = () => interopDefault(import('../pages/logout.vue' /* webpackChunkName: "pages/logout" */))
 const _6fdeaa4a = () => interopDefault(import('../pages/register.vue' /* webpackChunkName: "pages/register" */))
+const _ec97f13e = () => interopDefault(import('../pages/questions/_id.vue' /* webpackChunkName: "pages/questions/_id" */))
 
 const emptyFn = () => {}
 
@@ -61,6 +62,14 @@ export const routerOptions = {
     path: "/",
     component: _6fcbf23b,
     name: "index___id"
+  }, {
+    path: "/en/questions/:id?",
+    component: _ec97f13e,
+    name: "questions-id___en"
+  }, {
+    path: "/questions/:id?",
+    component: _ec97f13e,
+    name: "questions-id___id"
   }],
 
   fallback: false
