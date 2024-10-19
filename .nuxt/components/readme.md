@@ -10,5 +10,6 @@ You can directly use them in pages and other components without the need to impo
 - `<BtnCreateForm>` | `<btn-create-form>` (components/BtnCreateForm.vue)
 - `<NuxtLogo>` | `<nuxt-logo>` (components/NuxtLogo.vue)
 - `<TheHeader>` | `<the-header>` (components/TheHeader.vue)
+- `<Toolbar>` | `<toolbar>` (components/Toolbar.vue)
 - `<Tutorial>` | `<tutorial>` (components/Tutorial.vue)
 - `<VuetifyLogo>` | `<vuetify-logo>` (components/VuetifyLogo.vue)

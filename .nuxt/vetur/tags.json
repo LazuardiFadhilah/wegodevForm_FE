@@ -11,6 +11,9 @@
   "TheHeader": {
     "description": "Auto imported from components/TheHeader.vue"
   },
+  "Toolbar": {
+    "description": "Auto imported from components/Toolbar.vue"
+  },
   "Tutorial": {
     "description": "Auto imported from components/Tutorial.vue"
   },
