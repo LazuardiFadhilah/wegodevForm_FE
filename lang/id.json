@@ -8,7 +8,10 @@
     "FIELD_MIN":"{field} minimal {min} karakter",
     "EMAIL_INVALID":"Format email tidak valid",
     "FIELD_CONFIRM":"isi {fieldConfirm} tidak sama dengan {field}",
-    "EMAIL_EXIST":"Email sudah terdaftar"
+    "EMAIL_EXIST":"Email sudah terdaftar",
+
+    "INVALID_ID": "ID tidak valid",
+    "FORM_NOT_FOUND": "Form tidak ditemukan"
 }
 
       

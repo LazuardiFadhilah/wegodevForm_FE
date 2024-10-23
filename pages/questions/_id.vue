@@ -2,15 +2,8 @@
   <div>
     <v-container fluid class="pa-0"> <Toolbar /> </v-container>
     <v-container>
-      <v-row justify="center">
-        <v-col
-          md="12"
-          offset-md="2"
-          sm="10"
-          offset-sm="1"
-          xl="10"
-          offset-xl="1"
-        >
+      <v-row justify="center" align="center">
+        <v-col md="12" offset-md="2" sm="10" offset-sm="1" xl="10">
           <v-card>
             <v-card-text> Test </v-card-text>
           </v-card>
@@ -25,7 +18,7 @@ export default {
   async asyncData({ params, redirect }) {
     try {
       if (!params.id) {
-        throw { message: "FORM_ID_EMPTY " };
+        throw { message: "FORM_ID_EMPTY" };
       }
       return { formId: params.id };
     } catch (error) {
@@ -37,10 +30,21 @@ export default {
     async fetch() {
       try {
         const response = await this.$store.dispatch(`forms/show`, this.formId);
-
+        if (!response) throw { message: "ERROR" };
         return response;
       } catch (error) {
-        console.log(error);
+        if (error.response) {
+          this.$nuxt.error({
+            statusCode: error.response.status,
+            customMessage: error.response.data.message,
+          });
+        } else {
+          alert();
+          this.$store.commit("alerts/show", {
+            message: this.$t("SERVER_ERROR"),
+            type: "error",
+          });
+        }
       }
     },
   },
