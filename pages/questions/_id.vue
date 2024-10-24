@@ -5,7 +5,7 @@
       <v-row justify="center" align="center">
         <v-col md="12" offset-md="2" sm="10" offset-sm="1" xl="10">
           <v-card>
-            <v-card-text> Test </v-card-text>
+            <v-card-text> <QuestionTitle /> </v-card-text>
           </v-card>
         </v-col>
       </v-row>
@@ -39,7 +39,6 @@ export default {
             customMessage: error.response.data.message,
           });
         } else {
-          alert();
           this.$store.commit("alerts/show", {
             message: this.$t("SERVER_ERROR"),
             type: "error",

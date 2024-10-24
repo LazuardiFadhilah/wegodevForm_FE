@@ -1,3 +1,5 @@
+import { onUpdated } from "vue";
+
 export const state = () => ({
   id: null,
   title: null,
@@ -33,6 +35,18 @@ export const actions = {
     }
     commit("setForm", response);
     console.log(response);
+    return response;
+  },
+
+  async update({}, payload) {
+    const response = await this.$axios.$put(
+      `/forms/${payload.formId}`,
+      payload
+    );
+    if (!response) {
+      return false;
+    }
+
     return response;
   },
 };

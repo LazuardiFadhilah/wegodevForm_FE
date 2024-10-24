@@ -15,6 +15,7 @@ export const state = () => ({
 
 export const mutations = {
   show(state, alert) {
+    alert.show = true;
     state.alerts.push(alert);
   },
   close(state, index) {

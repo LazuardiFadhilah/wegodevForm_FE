@@ -11,6 +11,7 @@
     "EMAIL_EXIST":"Email sudah terdaftar",
 
     "INVALID_ID": "ID tidak valid",
+    "ID_INVALID": "ID tidak valid",
     "FORM_NOT_FOUND": "Form tidak ditemukan"
 }
 
