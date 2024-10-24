@@ -5,7 +5,9 @@
       <v-row justify="center" align="center">
         <v-col md="12" offset-md="2" sm="10" offset-sm="1" xl="10">
           <v-card>
-            <v-card-text> <QuestionTitle /> </v-card-text>
+            <v-card-text>
+              <QuestionTitle /> <QuestionDescription
+            /></v-card-text>
           </v-card>
         </v-col>
       </v-row>

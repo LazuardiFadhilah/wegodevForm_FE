@@ -20,6 +20,9 @@
   "VuetifyLogo": {
     "description": "Auto imported from components/VuetifyLogo.vue"
   },
+  "QuestionDescription": {
+    "description": "Auto imported from components/Question/Description.vue"
+  },
   "QuestionTitle": {
     "description": "Auto imported from components/Question/Title.vue"
   }

@@ -13,4 +13,5 @@ You can directly use them in pages and other components without the need to impo
 - `<Toolbar>` | `<toolbar>` (components/Toolbar.vue)
 - `<Tutorial>` | `<tutorial>` (components/Tutorial.vue)
 - `<VuetifyLogo>` | `<vuetify-logo>` (components/VuetifyLogo.vue)
+- `<QuestionDescription>` | `<question-description>` (components/Question/Description.vue)
 - `<QuestionTitle>` | `<question-title>` (components/Question/Title.vue)
