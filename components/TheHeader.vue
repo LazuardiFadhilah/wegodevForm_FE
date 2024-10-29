@@ -1,10 +1,12 @@
 <template>
   <v-toolbar flat class="px-1 px-md-2">
-    <v-toolbar-title>
-      <v-btn text plain :ripple="false" class="pl-0 v-btn--active" to="/">
-        <p class="text-h5 mb-0"><strong>wegodev</strong>Form</p>
-      </v-btn>
-    </v-toolbar-title>
+    <v-btn text plain :ripple="false" class="pl-0 v-btn--active" to="/">
+      <p class="text-h5 mb-0"><strong>wegodev</strong>Form</p>
+    </v-btn>
+    <p class="ml-3 mb-0 muted" v-if="process">
+      {{ $t(message) }}
+    </p>
+
     <v-spacer />
 
     <v-spacer />
@@ -22,3 +24,12 @@
     </v-menu>
   </v-toolbar>
 </template>
+
+<script>
+import { mapState } from "vuex";
+export default {
+  computed: {
+    ...mapState("saves", ["process", "message"]),
+  },
+};
+</script>

@@ -5,10 +5,24 @@ export default function ({ $axios, redirect, store }) {
         "Authorization"
       ] = `Bearer ${store.state.auth.accessToken}`;
     }
+    if (config.headers.Autosave) {
+      console.log("Mulai proses penyimpanan otomatis");
+      store.commit("saves/start");
+    }
+  });
+
+  $axios.onResponse((response) => {
+    if (response.config.headers.Autosave) {
+      console.log("selesai proses penyimpanan otomatis");
+      store.commit("saves/success");
+    }
   });
 
   $axios.onResponseError(async (error) => {
     try {
+      if (response.config.headers.Autosave) {
+        store.commit("saves/failed");
+      }
       if (
         error.response.data.message === "REFRESH_TOKEN_EXPIRED" ||
         error.response.data.message === "INVALID_REFRESH_TOKEN"
