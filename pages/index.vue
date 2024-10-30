@@ -12,7 +12,7 @@
 import BtnCreateForm from "~/components/BtnCreateForm.vue";
 
 export default {
-  middleware: "authenticated",
+  middleware: ["authenticated"],
   head() {
     return {
       title: "Home",

@@ -1,12 +1,12 @@
 <template>
   <div>
-    <v-container fluid class="pa-0"> <Toolbar /> </v-container>
+    <v-container fluid class="pa-0"> <Toolbar class="mb-5" /> </v-container>
     <v-container>
       <v-row justify="center" align="center">
         <v-col md="12" offset-md="2" sm="10" offset-sm="1" xl="10">
-          <v-card>
+          <v-card class="card-border-top">
             <v-card-text>
-              <QuestionTitle /> <QuestionDescription
+              <QuestionTitle class="text-h5" /> <QuestionDescription
             /></v-card-text>
           </v-card>
         </v-col>
@@ -17,6 +17,7 @@
 
 <script>
 export default {
+  middleware: ["authenticated"],
   async asyncData({ params, redirect }) {
     try {
       if (!params.id) {

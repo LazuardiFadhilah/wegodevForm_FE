@@ -1,5 +1,11 @@
 <template>
-  <v-text-field placeholder="title" :value="title" @input="typing($event)">
+  <v-text-field
+    placeholder="title"
+    hide-details
+    class="creator-input"
+    :value="title"
+    @input="typing($event)"
+  >
   </v-text-field>
 </template>
 

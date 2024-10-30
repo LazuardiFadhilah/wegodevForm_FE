@@ -20,7 +20,7 @@ export default function ({ $axios, redirect, store }) {
 
   $axios.onResponseError(async (error) => {
     try {
-      if (response.config.headers.Autosave) {
+      if (error.response.config.headers.Autosave) {
         store.commit("saves/failed");
       }
       if (
@@ -52,13 +52,13 @@ export default function ({ $axios, redirect, store }) {
           "Authorization"
         ] = `Bearer ${response.accessToken}`;
         return $axios(originalRequest);
-      } else {
-        return Promise.reject(error);
       }
+      return Promise.reject(error);
     } catch (error) {
       if (error.message === "LOGOUT") {
         return redirect("/logout");
       }
+      return Promise.reject(error);
     }
   });
 }
