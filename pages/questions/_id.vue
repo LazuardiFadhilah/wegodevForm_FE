@@ -3,12 +3,17 @@
     <v-container fluid class="pa-0"> <Toolbar class="mb-5" /> </v-container>
     <v-container>
       <v-row justify="center" align="center">
-        <v-col md="12" offset-md="2" sm="10" offset-sm="1" xl="10">
+        <v-col md="8" sm="8" xl="8">
           <v-card class="card-border-top">
             <v-card-text>
               <QuestionTitle class="text-h5" /> <QuestionDescription
             /></v-card-text>
           </v-card>
+        </v-col>
+      </v-row>
+      <v-row justify="center" align="center">
+        <v-col md="8" sm="8" xl="8">
+          <QuestionCard :formId="formId" />
         </v-col>
       </v-row>
     </v-container>
@@ -34,6 +39,9 @@ export default {
       try {
         const response = await this.$store.dispatch(`forms/show`, this.formId);
         if (!response) throw { message: "ERROR" };
+        if (response.form.question.lenght > 0) {
+          this.$store.commit("questions/set", response.form.question);
+        }
         return response;
       } catch (error) {
         if (error.response) {

@@ -5,6 +5,7 @@ export { default as TheHeader } from '../../components/TheHeader.vue'
 export { default as Toolbar } from '../../components/Toolbar.vue'
 export { default as Tutorial } from '../../components/Tutorial.vue'
 export { default as VuetifyLogo } from '../../components/VuetifyLogo.vue'
+export { default as QuestionCard } from '../../components/Question/Card.vue'
 export { default as QuestionDescription } from '../../components/Question/Description.vue'
 export { default as QuestionTitle } from '../../components/Question/Title.vue'
 
