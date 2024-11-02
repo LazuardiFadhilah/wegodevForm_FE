@@ -11,8 +11,8 @@
           </v-card>
         </v-col>
       </v-row>
-      <v-row justify="center" align="center">
-        <v-col md="8" sm="8" xl="8">
+      <v-row>
+        <v-col>
           <QuestionCard :formId="formId" />
         </v-col>
       </v-row>
@@ -39,9 +39,10 @@ export default {
       try {
         const response = await this.$store.dispatch(`forms/show`, this.formId);
         if (!response) throw { message: "ERROR" };
-        if (response.form.question.lenght > 0) {
+        if (response.form.question.length > 0) {
           this.$store.commit("questions/set", response.form.question);
         }
+
         return response;
       } catch (error) {
         if (error.response) {

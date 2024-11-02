@@ -38,7 +38,7 @@ export const actions = {
       return false;
     }
     commit("setForm", response);
-    console.log(response);
+    // console.log(response);
     return response;
   },
 

@@ -5,7 +5,7 @@ export const state = () => ({
 export const mutations = {
   set(state, questions) {
     state.questions = questions;
-  }
+  },
 };
 
 export const actions = {
